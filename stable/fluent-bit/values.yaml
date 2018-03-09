@@ -27,6 +27,11 @@ backend:
     ## Can be either 'msgpack' or 'json'
     format: msgpack
 
+## Allow overriding the pod command to support buffering to mounted extra
+## volume. When using buffering you may want to set Retry_Limit False in your
+## output config.
+# command: fluent-bit --buf_path=/path/to --buf_workers=2 --config=/config/path --daemon=false
+
 env: []
 
 ## ConfigMap override where fullname is {{.Release.Name}}-{{.Values.existingConfigMap}}
