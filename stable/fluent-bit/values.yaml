@@ -41,6 +41,14 @@ existingConfigMap: ""
 ##
 extraVolumes: []
 
+## Exposed ports for your daemonset and service. You can reach a random node
+## by using the service. Or stay on the node by referencing KUBERNETES_SERVICE_HOST
+## and your exposed port. This works in tandem with any existingConfigMap defined
+# exposedPorts:
+#  - port: 24224
+#    containerPort: 24224
+#    protocol: TCP
+
 ## Extra volume mounts for the fluent-bit pod.
 ## Ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/
 ##
